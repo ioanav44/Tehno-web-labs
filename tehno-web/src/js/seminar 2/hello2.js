@@ -37,6 +37,49 @@ function interleaveArrays(arr1, arr2) {
     return result;
 }
 
+function fib(n) {
+    if (n < 0) return null;
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    let a = 0, b = 1;
+    for (let i = 2; i <= n; i++) {
+        const c = a + b;
+        a = b;
+        b = c;
+    }
+    return b;
+}
+
+if (process.argv.length <= 2) {
+    console.log('not enough parameters');
+} else {
+    const n = Number(process.argv[2]);
+    if (!Number.isInteger(n) || n < 0) {
+        console.log('invalid parameter');
+    } else {
+        console.log(fib(n)); // elementul de ordin n (fib(0)=0, fib(1)=1)
+    }
+}
+
+function letterFrequencies(text) {
+    if (typeof text !== 'string') return {};
+    // elimină spațiile și normalizează la litere mici
+    const normalized = text.replace(/\s+/g, '').toLowerCase();
+    const total = normalized.length;
+    if (total === 0) return {};
+    const counts = {};
+    for (let ch of normalized) {
+        counts[ch] = (counts[ch] || 0) + 1;
+    }
+    for (let k in counts) {
+        counts[k] = counts[k] / total;
+    }
+    return counts;
+}
+
 console.log(countDifferentChars("tehno", "techno"));
 console.log(listToArray([1, 2, 3]));
 console.log(interleaveArrays([1,3,5], [2,4,6]));
+const sampleString = 'the quick brown fox jumps over the lazy dog';
+const input = process.argv.length > 2 ? process.argv.slice(2).join(' ') : sampleString;
+console.log(letterFrequencies(input));
