@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <nav class="main-menu">
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Articles</a></li>
+    </ul>
+  </nav>
+
+  <button class="btn">Click me</button>
+
+  <input type="text">
+  <input type="text" required>
+
+  <label>
+    <input type="checkbox" class="chk">
+    Bifează
+  </label>
+
+  <p>Lorem ipsum dolor sit amet...</p>
+
+  <table class="students">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Faculty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ionut</td>
+        <td>ASE</td>
+      </tr>
+      <tr>
+        <td>Mihaela</td>
+        <td>Politie</td>
+      </tr>
+      <tr>
+        <td>Alex</td>
+        <td>Secretar</td>
+      </tr>
+      <tr>
+        <td>Ioana</td>
+        <td>Poli</td>
+      </tr>
+      <tr>
+        <td>Mihaita</td>
+        <td>Bibliotecar</td>
+      </tr>
+      <tr>
+        <td>Denis</td>
+        <td>Politie</td>
+      </tr>
+      <tr>
+        <td>Marcel</td>
+        <td>Pompieri</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Tic Tac Toe</h2>
+  <div class="board">
+    <div class="cell">X</div>
+    <div class="cell">O</div>
+    <div class="cell">X</div>
+    <div class="cell">O</div>
+    <div class="cell">X</div>
+    <div class="cell">O</div>
+    <div class="cell">X</div>
+    <div class="cell">O</div>
+    <div class="cell">X</div>
+  </div>
+
+  <h2>Contact Form</h2>
+  <div class="form-card">
+    <form class="contact-form" action="#" method="post" novalidate>
+      <label for="fname">First Name</label>
+      <input id="fname" type="text" name="firstName" placeholder="Your name.." required>
+
+      <label for="lname">Last Name</label>
+      <input id="lname" type="text" name="lastName" placeholder="Your last name.." required>
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option>Australia</option>
+        <option>Canada</option>
+        <option selected>Hungary</option>
+        <option>Romania</option>
+        <option>USA</option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
